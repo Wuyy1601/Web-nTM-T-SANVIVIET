@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SẢN VỊ VIỆT - Cửa Hàng</title>
+    <link rel="stylesheet" href="shop.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/img/logo/image 42.png"
+    />
+  </head>
+  <body>
+    <div class="overlay"></div>
+    <div class="popup">
+      <img
+        src="../assets/img/popup/768px-Eo_circle_orange_checkmark.svg.png"
+        alt=""
+      />
+      <h3>Thêm vào giỏ hàng thành công !!!</h3>
+      <button class="close-popup">Hoàn tất</button>
+    </div>
+    <!-- Header -->
+    <header>
+      <div class="first">
+        <div class="help-FAQs">
+          <div><p>Help desk</p></div>
+          <div><p>FAQs</p></div>
+        </div>
+        <div class="language">
+          <div><i class="fa-solid fa-globe"></i></div>
+          <div><p>VN</p></div>
+        </div>
+      </div>
+      <nav>
+        <div class="logo">
+          <img src="../assets/img/logo/image 42.png" alt="Logo" />
+        </div>
+        <h1 class="shopname">SANVIVIET</h1>
+        <ul>
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a class="on-page" href="./Shop/shop.html">Sản phẩm</a></li>
+          <li><a href="../Sale/sale.html" class="product">Khuyến mãi</a></li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="user-sec">
+          <div class="cart" onclick="RedirectToCart();">
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Search Section -->
+    <section class="search-bar">
+      <div class="link-page">
+        <p style="letter-spacing: 1px">
+          Trang chủ <i class="fa-solid fa-angle-right"></i> Sản phẩm
+        </p>
+        <h2>Cửa Hàng</h2>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Tìm kiếm..." />
+        <button>Search</button>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="shop-container">
+      <!-- Sidebar -->
+      <aside class="filter">
+        <div class="filter-head">
+          <h3>Bộ Lọc</h3>
+          <p>SANVIVIET</p>
+        </div>
+        <div class="filter-section">
+          <h4>Danh mục</h4>
+          <ul>
+            <li>
+              <label>
+                Đặc sản
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Trái cây tươi
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Đồ uống
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Bánh
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Hạt
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Thực phẩm
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Chế biến sẵn
+                <input type="radio" name="category" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Gợi ý
+                <input type="radio" name="category" />
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-section">
+          <h4>Tình trạng</h4>
+          <ul>
+            <li>
+              <label>
+                Có sẵn
+                <input type="radio" name="status" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Chờ hàng
+                <input type="radio" name="status" />
+              </label>
+            </li>
+          </ul>
+        </div>
+        <div class="filter-section">
+          <h4>Giá</h4>
+          <ul>
+            <li>
+              <label>
+                Khuyến mãi
+                <input type="radio" name="price" />
+              </label>
+            </li>
+            <li>
+              <label>
+                Ưu đãi đặc biệt
+                <input type="radio" name="price" />
+              </label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Product Grid -->
+      <section class="products">
+        <h2>Sản Phẩm</h2>
+        <div id="products">
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/1.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Quả Chà Là 250g</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">215.000 ₫</span>
+              <span class="new-price" data-price="145000">145.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Quả Chà Là 250g">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/2.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Tỏi Lý Sơn</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">460.000 ₫</span>
+              <span class="new-price" data-price="275000">275.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Tỏi Lý Sơn">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/3.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Dâu Tây Sấy Đà Lạt</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">690.000 ₫</span>
+              <span class="new-price" data-price="540000">540.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Dâu Tây Sấy Đà Lạt"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/4.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Bánh Tổ Xứ Quảng</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="75000">75.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Bánh Tổ Xứ Quảng"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/5.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Bách ít trần Huế</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">250.000 ₫</span>
+              <span class="new-price" data-price="185000">185.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Bánh ít trần Huế"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/6.png" alt="Cà Phê Đắk Lắk" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Thốt nốt An Giang</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="349000">349.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Thốt nốt An Giang"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img
+              src="../assets/img/shop/7.png"
+              alt="Cà Phê Đắk Lắk"
+              onclick="RedirectToProduct();"
+            />
+            <p class="brand" onclick="RedirectToCart();">SANVIET</p>
+            <h3 class="product-name" onclick="RedirectToCart();">
+              Cà Phê Đắk Lắk
+            </h3>
+            <p style="display: none" class="type">grams</p>
+            <p class="price">
+              <span class="old-price" onclick="RedirectToCart();"
+                >250.000 ₫</span
+              >
+              <span
+                class="new-price"
+                data-price="192000"
+                onclick="RedirectToCart();"
+                >192.000 ₫</span
+              >
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Cà Phê Đắk Lắk">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/8.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Thịt Trâu gác bếp</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">1050.000 ₫</span>
+              <span class="new-price" data-price="649000">649.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Thịt Trâu gác bếp"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/9.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Hạt macca ĐăkLăk 500g</h3>
+            <p style="display: none" class="type">500 grams</p>
+            <p class="price">
+              <span class="old-price">299.000 ₫</span>
+              <span class="new-price" data-price="215000">215.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Hạt macca ĐăkLăk 500g"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/10.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Hạt điều Bình Phước 1kg</h3>
+            <p style="display: none" class="type">1kg</p>
+            <p class="price">
+              <span class="old-price">450.000 ₫</span>
+              <span class="new-price" data-price="255000">255.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Hạt điều Bình Phước 1kg"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/11.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Dừa sáp Trà Vinh</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">210.000 ₫</span>
+              <span class="new-price" data-price="145000">145.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Dừa sáp Trà Vinh"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/12.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Yến Sào Khánh Hòa</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="999000">999.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Yến Sào Khánh Hòa"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/13.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Bánh đậu xanh</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">150.000 ₫</span>
+              <span class="new-price" data-price="54000">54.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Bánh đậu xanh">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/14.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Rượu sim Phú Quốc</h3>
+            <p style="display: none" class="type">chai</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="134000">134.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Rượu sim Phú Quốc"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/15.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Trà Atiso Đà Lạt</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">319.000 ₫</span>
+              <span class="new-price" data-price="199000">199.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Trà Atiso Đà Lạt"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/16.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Trà Thái Nguyên</h3>
+            <p style="display: none" class="type">gói</p>
+            <p class="price">
+              <span class="old-price">126.000 ₫</span>
+              <span class="new-price" data-price="84000">84.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Trà Thái Nguyên">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/17.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Gạo Nếp Nương</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="145000">312.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Gạo Nếp Nương">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/18.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Khoai lang gừng</h3>
+            <p style="display: none" class="type">hộp</p>
+            <p class="price">
+              <span class="old-price">169.000 ₫</span>
+              <span class="new-price" data-price="115000">115.000 ₫</span>
+            </p>
+            <button class="add-to-cart" data-id="1" data-name="Khoai lang gừng">
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/19.png" alt="Rượu Sâm" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Sầu riêng sấy 250g</h3>
+            <p style="display: none" class="type">gói</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="515000">515.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Sầu riêng sấy 250g"
+            >
+              Add 🛒
+            </button>
+          </div>
+          <div class="product-card" style="line-height: 35px">
+            <img src="../assets/img/shop/20.png" alt="Hồng treo giỏ 500g" />
+            <p class="brand">SANVIET</p>
+            <h3 class="product-name">Hồng treo giỏ 500g</h3>
+            <p style="display: none" class="type">gói</p>
+            <p class="price">
+              <span class="old-price"></span>
+              <span class="new-price" data-price="214000">214.000 ₫</span>
+            </p>
+            <button
+              class="add-to-cart"
+              data-id="1"
+              data-name="Hồng treo giỏ 500g"
+            >
+              Add 🛒
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="newsletter">
+        <img
+          src="../assets/img/logo/logofooter.png"
+          alt="Newsletter Image"
+          class="newsletter-image"
+        />
+        <h3>Subscribe to our Newsletter</h3>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="contact-footer">
+        <div class="contact-info">
+          <ul class="footer-links">
+            <li>Trang chủ</li>
+            <li>Sản phẩm</li>
+            <li>Khuyến mãi</li>
+            <li>Blog</li>
+            <li>Giỏ hàng</li>
+          </ul>
+        </div>
+        <div class="contact-link">
+          <div class="contact-details">
+            <p><i class="fa-solid fa-envelope"></i> sanviviet@gmail.com</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 44 Tân Lập, Linh Trung,
+              Linh Xuân, TP.Thủ Đức
+            </p>
+            <p><i class="fa-solid fa-mobile"></i> +084 5421234560</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/eadf15c588.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./shop.js"></script>
+  </body>
+</html>

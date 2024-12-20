@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Modak&family=Quicksand:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="cart.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/img/logo/image 42.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="first">
+        <div class="help-FAQs">
+          <div><p>Help desk</p></div>
+          <div><p>FAQs</p></div>
+        </div>
+        <div class="language">
+          <div><i class="fa-solid fa-globe"></i></div>
+          <div><p>VN</p></div>
+        </div>
+      </div>
+      <nav>
+        <div class="logo">
+          <img src="../assets/img/logo/image 42.png" alt="Logo" />
+        </div>
+        <h1 class="shopname">SANVIVIET</h1>
+        <ul>
+          <li><a href="../index.html">Trang chủ</a></li>
+          <li><a href="../Shop/shop.html">Sản phẩm</a></li>
+          <li>
+            <a href="../Sale/sale.html" class="product">Khuyến mãi</a>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <div class="user-sec">
+          <div class="cart on-page">
+            <i class="fa-solid fa-cart-shopping"></i> Cart
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Search Section -->
+    <section class="search-bar" id="about-cart">
+      <div class="link-page">
+        <p style="letter-spacing: 1px">
+          Trang chủ <i class="fa-solid fa-angle-right"></i> Giỏ hàng
+        </p>
+        <p class="tittle-product">Giỏ hàng của tôi</p>
+      </div>
+      <div class="search">
+        <p class="sort">Price <i class="fa-solid fa-angle-down"></i></p>
+        <p>Sắp xếp</p>
+      </div>
+    </section>
+    <main id="about-cart">
+      <div class="shopping-cart" id="shopping-cart">
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th>Hình ảnh</th>
+              <th>Tên sản phẩm</th>
+              <th>Loại</th>
+              <th>Giá</th>
+              <th>Số lượng</th>
+              <th>Tổng tiền</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody id="cart-items"></tbody>
+        </table>
+        <div class="cart-summary">
+          <div class="coupon">
+            <input type="text" placeholder="Nhập mã khuyến mãi" />
+            <button class="apply-coupon">Áp dụng giảm giá</button>
+          </div>
+          <div class="summary-info">
+            <span class="sale-off-price">Giảm giá: <b>0.00 ₫</b></span>
+            <span class="all-summary-total-price"
+              >Tổng tiền: <b>0.00 ₫</b></span
+            >
+            <span class="pay-price"
+              >Thanh Toán: <b class="total-price">0.00 ₫</b></span
+            >
+          </div>
+        </div>
+      </div>
+      <div id="pay-btn">
+        <button class="pay-btn">
+          Thanh toán<i class="fa-solid fa-arrow-right"></i>
+        </button>
+      </div>
+    </main>
+    <!-- Container cho hóa đơn -->
+    <div id="bill-container" style="display: none">
+      <section class="search-bar bill">
+        <div class="link-page">
+          <p style="letter-spacing: 1px">
+            Trang chủ <i class="fa-solid fa-angle-right"></i> Đơn hàng
+          </p>
+          <p class="tittle-product">Đơn Hàng</p>
+        </div>
+        <div class="search">
+          <button class="return-btn">Quay lại giỏ hàng</button>
+        </div>
+      </section>
+      <main class="bill">
+        <div class="shopping-cart-bill">
+          <table class="cart-table-bill">
+            <thead>
+              <tr>
+                <th>Hình ảnh</th>
+                <th>Tên sản phẩm</th>
+                <th>Loại</th>
+                <th>Giá</th>
+                <th>Số lượng</th>
+                <th>Tổng tiền</th>
+              </tr>
+            </thead>
+            <tbody id="bill-items">
+              <!-- Hóa đơn sẽ được thêm vào đây -->
+            </tbody>
+          </table>
+        </div>
+      </main>
+      <div class="payment-summary bill">
+        <div class="shipping-info">
+          <div class="note">
+            <label for="note">Lời nhắn</label>
+            <input type="text" id="note" placeholder="Nhập lời nhắn của bạn" />
+          </div>
+          <div class="shipping-method">
+            <p>
+              <strong>Phí vận chuyển</strong>:
+              <span class="shipping-fee">30.000 đ</span>
+            </p>
+            <p class="shipping-detail">
+              Vận chuyển nhanh Đảm bảo nhận hàng từ
+              <strong>3 ngày</strong> - <strong>5 ngày sau khi đặt hàng.</strong
+              ><br />
+              Nhận Voucher trị giá <strong>15.000 đ</strong> nếu đơn hàng được
+              giao đến bạn sau ngày <strong>thứ 5</strong>.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="payment-info bill">
+        <h3>Phương thức thanh toán</h3>
+        <p>Thanh toán khi nhận hàng</p>
+        <h4>Chi tiết thanh toán</h4>
+        <div class="payment-details">
+          <p>Tổng tiền hàng: <span id="total-price-bill">0 ₫</span></p>
+          <p>Tổng tiền phí vận chuyển: <span>30.000 ₫</span></p>
+        </div>
+      </div>
+      <div class="total-summary bill">
+        <div>
+          <p>
+            <strong>Tiết kiệm:</strong> <span class="saving-amount">0 ₫</span>
+          </p>
+          <p>
+            <strong>Tổng thanh toán:</strong>
+            <span class="total-amount">30.000 ₫</span>
+          </p>
+        </div>
+        <button class="checkout-btn">Đặt Hàng</button>
+      </div>
+    </div>
+    <div class="overlay" style="display: none"></div>
+    <div class="form-info" style="display: none">
+      <form>
+        <i class="fa-solid fa-x form-close-btn"></i>
+        <h3>Thông tin người nhận</h3>
+        <label for="username">Họ và tên</label>
+        <input type="text" placeholder="Name" id="form-name" />
+        <label for="Phone">Số điện thoại</label>
+        <input type="text" placeholder="Phone" id="form-phone" />
+        <label for="Mail">Email</label>
+        <input type="email" placeholder="Mail" id="form-email" />
+        <label for="Adress">Địa chỉ</label>
+        <input type="text" placeholder="Adress" id="form-address" />
+        <button class="accept-form">Xác nhận</button>
+      </form>
+    </div>
+    <!-- footer -->
+    <footer class="footer">
+      <div class="newsletter">
+        <img
+          src="../assets/img/logo/logofooter.png"
+          alt="Newsletter Image"
+          class="newsletter-image"
+        />
+        <h3>Subscribe to our Newsletter</h3>
+        <form class="subscribe-form">
+          <input type="email" placeholder="Enter your email" required />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+      <div class="contact-footer">
+        <div class="contact-info">
+          <ul class="footer-links">
+            <li>Trang chủ</li>
+            <li>Sản phẩm</li>
+            <li>Khuyến mãi</li>
+            <li>Blog</li>
+            <li>Giỏ hàng</li>
+          </ul>
+        </div>
+        <div class="contact-link">
+          <div class="contact-details">
+            <p><i class="fa-solid fa-envelope"></i> sanviviet@gmail.com</p>
+            <p>
+              <i class="fa-solid fa-location-dot"></i> 44 Tân Lập, Linh Trung,
+              Linh Xuân, TP.Thủ Đức
+            </p>
+            <p><i class="fa-solid fa-mobile"></i> +084 5421234560</p>
+            <div class="social-icons">
+              <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://kit.fontawesome.com/eadf15c588.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
